@@ -1,0 +1,23 @@
+<h3>Add Appointment</h3>
+
+<select id="patient">
+  {% for patient in patients %}
+    <option value="{{ patient.id }}">{{ patient.name }}</option>
+  {% endfor %}
+</select><br><br>
+
+<select id="doctor">
+  {% for doctor in doctors %}
+    <option value="{{ doctor.id }}">{{ doctor.name }}</option>
+  {% endfor %}
+</select><br><br>
+
+<input type="date" id="date"><br><br>
+
+<button onclick="addAppointment()">Create</button>
+
+<p id="msg"></p>
+
+<a href="/">Back</a>
+
+<script src="/static/app.js"></script>
